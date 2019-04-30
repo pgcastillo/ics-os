@@ -544,6 +544,14 @@ int console_execute(const char *str){
          last_mouse_y=mouse_y; 
       }
    }else 
+   if (strcmp(u,"add") == 0){ //-- Adds two integers. Args: <num1> <num2>
+		int a, b;
+		u = strtok(0," ");
+		a = atoi(u);
+		u = strtok(0," ");
+		b = atoi(u);
+		printf("%d + %d = %d\n",a,b,a+b);
+		}else
    if (strcmp(u,"shutdown") == 0){  //-- Shuts down the system.
       sendmessage(0,MES_SHUTDOWN,0);
    }else
